@@ -1,0 +1,20 @@
+# CPU-only course tools. GPU/Metal work (Buddy, nanoGPT/nanochat training)
+# runs natively on macOS, not here. See README.md → "Containers".
+services:
+  lab:
+    build: .
+    image: zero-to-gpt-tools:local
+    ports:
+      # Host side bound to 127.0.0.1 only: not reachable from the network.
+      - "127.0.0.1:8888:8888"
+    volumes:
+      # Live-edit the repo from the host. On Linux, if your user ID isn't
+      # 1000, remove this line or run with `user: "${UID}:${GID}"`.
+      - ./:/home/learner/zero-to-gpt
+
+  selfcheck:
+    image: zero-to-gpt-tools:local
+    build: .
+    profiles: ["ci"]
+    command: ["python", "-m", "bughunt", "selfcheck"]
+    network_mode: none

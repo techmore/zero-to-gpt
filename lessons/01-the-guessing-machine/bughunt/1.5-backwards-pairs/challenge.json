@@ -1,0 +1,24 @@
+{
+  "id": "1.5",
+  "title": "Buddy tested it (sort of)",
+  "level": 4,
+  "kind": "code",
+  "buddy_says": "I wrote count_pairs() AND a test for it, buddy_test.py. My test passes, so my code is proven correct! 🏆",
+  "how_to_check": "First run Buddy's test: python3 -m bughunt test 1.5 buddy_test.py. It passes... but what does it actually check? Then write a test in my_test.py that checks for the RIGHT answer, not just SOME answer.",
+  "hints": [
+    "Could Buddy's test ever fail? What wrong code would still pass it?",
+    "Try the smallest story ever: count_pairs(['the', 'cat']). What should it be, exactly?",
+    "In the story, 'the' is followed by 'cat' 5 times. Does counts['the']['cat'] say 5?"
+  ],
+  "buggy": true,
+  "buddy_code": "buddy_code.py",
+  "starter_test": "my_test.py",
+  "lazy_test": "buddy_test.py",
+  "reference": "../../lab/guessing_machine.py",
+  "solution": "../../teacher/solutions/solution_1_5.py",
+  "planted_bug": "count_pairs stores every pair backwards: counts[next][current] instead of counts[current][next]. So counts['cat'] lists the words that came BEFORE 'cat'. Buddy's test only checked that counts was not empty, so it passed anyway. A test that can't fail is a lazy test.",
+  "buddy_persona_note": "Level 4, lazy test. count_pairs records pairs backwards. Buddy proudly shows buddy_test.py, which only checks that counts is not None and not empty. Defend the test as 'passing'. Concede when the student shows a test with an exact expected value that fails.",
+  "example_tests": [
+    "test_example_the_is_in_there"
+  ]
+}

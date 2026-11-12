@@ -1,0 +1,21 @@
+{
+  "id": "1.2",
+  "title": "Buddy's fun fact",
+  "level": 2,
+  "kind": "quiz",
+  "buddy_says": "Fun fact! 🤓 Andrey Markov first tried this on a real book in 1913. He counted letters in Shakespeare's Hamlet using a computer. I'm 100% sure.",
+  "question": "Buddy sounds very sure. Which parts of the fun fact are WRONG? Pick every wrong one.",
+  "choices": {
+    "A": "1913",
+    "B": "Shakespeare's Hamlet",
+    "C": "using a computer",
+    "D": "counting letters",
+    "E": "Nothing is wrong. It's all correct."
+  },
+  "answer_format": "letters",
+  "answer_sha256": "07b6ee2adcd7d4a8df4c488c6544459d91898567f011b9968166990248c6dc6f",
+  "how_to_check": "Read 'The Story' in this lesson's README. Check each part on its own. Being sure is not the same as being right.",
+  "well_done": "Buddy mixed true facts with made-up ones and said them all in the same confident voice. A confident voice is not evidence. Check the source!",
+  "planted_bug": "Two false details hidden among true ones: Markov counted Pushkin's Eugene Onegin (not Hamlet), and he did it by hand (no computers existed in 1913).",
+  "buddy_persona_note": "Level 2, confident fib. Deliver the mixed true and false fact with total confidence. If challenged without evidence, stay confident. If the student cites the lesson's Story section, admit both errors and name the real book (Pushkin's Eugene Onegin, counted by hand)."
+}

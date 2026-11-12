@@ -1,0 +1,14 @@
+{
+  "id": "1.1",
+  "title": "How many cats?",
+  "level": 1,
+  "kind": "quiz",
+  "buddy_says": "I counted the whole story for you! The word 'the' is followed by 'cat' 7 times. Cats everywhere! 🐱",
+  "question": "In tiny_story.txt, how many times does 'cat' come right after 'the'? Count it yourself. Don't just trust Buddy!",
+  "answer_format": "number",
+  "answer_sha256": "33bae4eee1594540c6c632b8bff96b4a555d4221a9f3b407e6ba70c01c380b58",
+  "how_to_check": "Open lessons/01-the-guessing-machine/lab/data/tiny_story.txt and count every 'the cat' ('The cat' with a capital T counts too). Or check with count_pairs in the lab notebook.",
+  "well_done": "Buddy's number was wrong. Plain-wrong mistakes are the easiest kind to catch, but only if somebody actually checks.",
+  "planted_bug": "Buddy reports 7 instead of the real count.",
+  "buddy_persona_note": "Level 1, plain wrong. State a wrong count (7) cheerfully. If the student says the real number, agree and thank them for checking. Never reveal the right number first."
+}

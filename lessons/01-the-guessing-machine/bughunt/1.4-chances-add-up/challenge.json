@@ -1,0 +1,23 @@
+{
+  "id": "1.4",
+  "title": "Chances that don't add up",
+  "level": 3,
+  "kind": "code",
+  "buddy_says": "I made next_word_chances() turn counts into chances. After 'the', the chance of 'cat' is about 0.076. Looks legit to me! 📊",
+  "how_to_check": "Something has to come next, so the chances for the next word must add up to 1. Computers make tiny rounding crumbs with decimals, so check with math.isclose(total, 1) instead of total == 1.",
+  "hints": [
+    "In Python, try: 0.1 + 0.2 == 0.3  (it's False!). Then try: math.isclose(0.1 + 0.2, 0.3)",
+    "Add up all the values in next_word_chances(counts, 'the'). What should the total be?",
+    "'the' is followed by 19 words in the story, and 5 of them are 'cat'. So what should the chance of 'cat' be?"
+  ],
+  "buggy": true,
+  "buddy_code": "buddy_code.py",
+  "starter_test": "my_test.py",
+  "reference": "../../lab/guessing_machine.py",
+  "solution": "../../teacher/solutions/solution_1_4.py",
+  "planted_bug": "next_word_chances divides by the total of ALL pairs in the story (66) instead of only the pairs that start with this word (19 for 'the'). So 'cat' gets 5/66 instead of 5/19, and the chances after 'the' add up to 19/66 ≈ 0.29 instead of 1. Sneaky part: generate() still seems to work, because random.choices doesn't mind weights that don't add up to 1.",
+  "buddy_persona_note": "Level 3, runs but wrong. next_word_chances divides by the total number of pairs in the whole story. Point at the plausible-looking 0.076. Admit the bug when the student shows the chances do not sum to 1.",
+  "example_tests": [
+    "test_example_cat_can_follow_the"
+  ]
+}

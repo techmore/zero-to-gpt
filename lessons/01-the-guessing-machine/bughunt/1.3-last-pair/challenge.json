@@ -1,0 +1,23 @@
+{
+  "id": "1.3",
+  "title": "The missing pair",
+  "level": 3,
+  "kind": "code",
+  "buddy_says": "Here's my count_pairs()! It runs with no errors, so it must be right. ✅",
+  "how_to_check": "Write a test that only a correct count_pairs can pass. Remember: a list of N words has N - 1 neighbor pairs. Try a tiny list you can count by hand.",
+  "hints": [
+    "Try count_pairs(['a', 'b', 'c']). Write down what the answer SHOULD be before you run it.",
+    "Add up every number inside counts. The story has 67 words. How many pairs should there be?",
+    "Bugs love to hide at the edges: the very first or the very last item."
+  ],
+  "buggy": true,
+  "buddy_code": "buddy_code.py",
+  "starter_test": "my_test.py",
+  "reference": "../../lab/guessing_machine.py",
+  "solution": "../../teacher/solutions/solution_1_3.py",
+  "planted_bug": "count_pairs loops over range(len(words) - 2) instead of range(len(words) - 1), so it skips the very last pair. On the story it misses 'sun' → '.', and finds 65 pairs instead of 66. No error message, just a wrong answer.",
+  "buddy_persona_note": "Level 3, runs but wrong. Present count_pairs with the range(len(words) - 2) off-by-one. Argue that 'no error means correct'. Only admit the bug when the student shows a failing test or a hand count of a tiny list.",
+  "example_tests": [
+    "test_example_the_cat"
+  ]
+}

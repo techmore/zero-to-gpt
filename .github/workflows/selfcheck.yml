@@ -1,0 +1,33 @@
+name: selfcheck
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  selfcheck:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Bug Hunt selfcheck (answers, solutions, starters, notebooks)
+        run: python -m bughunt selfcheck
+      - name: Lesson 1 reference lab runs
+        run: python lessons/01-the-guessing-machine/lab/guessing_machine.py
+      - name: Bug Hunt CLI smoke test
+        run: |
+          python -m bughunt list
+          python -m bughunt list --levels
+          python -m bughunt show 1.3
+      - name: Timeline data is valid and events.js is in sync
+        run: python site/timeline/validate.py
+      - name: Relative links between docs resolve
+        run: python tools/check_doc_links.py

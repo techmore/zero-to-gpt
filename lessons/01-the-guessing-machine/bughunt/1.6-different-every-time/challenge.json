@@ -1,0 +1,25 @@
+{
+  "id": "1.6",
+  "title": "Different every time?!",
+  "level": 5,
+  "kind": "code",
+  "buddy_says": "Here's my generate(). Run it twice and you'll get two different sentences. I promise that's on purpose: it rolls weighted dice, like the paper bag. 🎲 Bug or not? Prove it either way!",
+  "how_to_check": "Random doesn't mean 'anything goes'. Even random output has to follow rules. Test the RULES: (1) the first word is the start word, (2) every pair of neighbor words really appeared in the counts, (3) it is never longer than the length you asked for. Use a loop to test it many times.",
+  "hints": [
+    "Use a loop: for trial in range(200): ... and check the rules every time.",
+    "words[i] and words[i + 1] are neighbors. Check that words[i + 1] in counts[words[i]].",
+    "Want the same 'random' result every time? Pass rng=random.Random(42). Same seed, same sentence.",
+    "If your test fails, ask: is the CODE wrong, or is my RULE wrong?"
+  ],
+  "buggy": false,
+  "buddy_code": "buddy_code.py",
+  "starter_test": "my_test.py",
+  "reference": "../../lab/guessing_machine.py",
+  "solution": "../../teacher/solutions/solution_1_6.py",
+  "planted_bug": "Nothing! This time Buddy's generate() is exactly the correct code. Different output every run is how it's supposed to work. Random is not the same as broken.",
+  "well_done": "You didn't just trust Buddy, and you didn't just distrust Buddy. You CHECKED. Now your tests are proof that anyone can re-run. That's integrity.",
+  "buddy_persona_note": "Level 5, actually right. The code is identical to the reference. Calmly explain that randomness is intended. If the student claims a bug, ask for a failing test that also passes on correct code. Do not cave to pressure without evidence: agreeing with a wrong claim is its own mistake.",
+  "example_tests": [
+    "test_example_gives_a_list"
+  ]
+}

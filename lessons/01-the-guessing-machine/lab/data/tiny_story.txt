@@ -1,0 +1,10 @@
+The cat sat on the mat.
+The dog sat on the log.
+The cat saw the dog.
+The dog saw the cat.
+A bird sat on the dog.
+The cat ran to the tree.
+The bird sang in the tree.
+The dog ran to the mat.
+The cat sat in the sun.
+The bird saw the sun.

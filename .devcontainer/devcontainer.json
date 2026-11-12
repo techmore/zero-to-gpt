@@ -1,0 +1,22 @@
+{
+  // CPU-only course tools (JupyterLab + bughunt), built from the repo's Dockerfile.
+  // Buddy and model training need Apple's Metal GPU, so they run natively on macOS, not here.
+  "name": "Zero to GPT (CPU tools)",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/home/learner/zero-to-gpt",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/learner/zero-to-gpt,type=bind",
+  "remoteUser": "learner",
+  "forwardPorts": [8888],
+  "portsAttributes": {
+    "8888": { "label": "JupyterLab", "onAutoForward": "notify" }
+  },
+  "postCreateCommand": "python -m bughunt selfcheck",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-toolsai.jupyter"]
+    }
+  }
+}
