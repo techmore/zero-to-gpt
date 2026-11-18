@@ -4,6 +4,8 @@
 
 Zero to GPT is a free, open-source course on how large language models work. It starts with zero: a paper bag, some slips of paper, and a story. It ends at Andrej Karpathy's [nanoGPT](https://github.com/karpathy/nanoGPT) and [nanochat](https://github.com/karpathy/nanochat). Along the way it follows the real history: who was stuck on what problem, what they tried, and what they called it in their own words.
 
+**Live site:** https://techmore.github.io/zero-to-gpt/site/
+
 ## Who it's for
 
 - **Kids (grades 6–8).** Every lesson has a *Kid version*, an unplugged activity, and a short Python lab. It's built for a class of about 12, or a summer group of about 5.
@@ -134,3 +136,5 @@ python3 tools/check_doc_links.py
 - **Lesson and content text** is under [Creative Commons Attribution-ShareAlike 4.0](LICENSE-CONTENT.md).
 
 [`LICENSE-CONTENT.md`](LICENSE-CONTENT.md) lists which paths fall under which license.
+
+Part of [Techmore](https://techmore.github.io/pages/repos/).
